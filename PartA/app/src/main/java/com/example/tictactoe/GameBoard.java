@@ -1,3 +1,5 @@
+/*package com.example.tictactoe;
+
 import javafx.beans.Observable;
 
 import javax.swing.*;
@@ -18,9 +20,9 @@ public class GameBoard extends Applet {
    // Label turnLabel = new Label();   Updated because the class used JLabel instead of Label
     Button startButton = new Button();
     TTTButton[] tttButton = new TTTButton[9];
-    TTTGame game = new TTTGame();
 
-    //From TTTGame
+
+
     int current = 0;
     Player[] players = new Player[2];
 
@@ -144,3 +146,4 @@ public class GameBoard extends Applet {
     }
 }
 
+*/

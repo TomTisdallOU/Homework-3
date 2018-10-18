@@ -1,3 +1,5 @@
+package com.example.tictactoe;
+
 import java.util.Observer;
 
 public class Player {
