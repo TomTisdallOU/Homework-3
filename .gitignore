@@ -7,6 +7,15 @@
 
 # Java class files
 *.class
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
 
 # generated files
 bin/
@@ -34,3 +43,6 @@ output.json
 #NDK
 obj/
 .externalNativeBuild
+PartA/.idea/gradle.xml
+PartA/.idea/misc.xml
+PartA/.idea/vcs.xml
