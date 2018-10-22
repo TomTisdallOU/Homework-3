@@ -6,7 +6,7 @@ public class Player {
 
     private String name;
     private DataCell[] cells = new DataCell[9];
-    private String symbol;
+    private int symbol;
 
 
     //TODO -- Determine the winner here.
@@ -27,10 +27,10 @@ public class Player {
 
     public Player(){
         this.name = "";
-        this.symbol = "";
+        this.symbol = 0;
     }
 
-    public Player(String name, String symbol){
+    public Player(String name, int symbol){
         this.name = name;
         this.symbol = symbol;
         for (int i = 0; i < 9; i++) {
@@ -39,7 +39,7 @@ public class Player {
     }
 
     public void MarkCell( int cellNumber){
-        cells[cellNumber].setSymbol(this.symbol);
+       // cells[cellNumber].setSymbol(this.symbol);
 
 
     }
@@ -58,10 +58,10 @@ public class Player {
   public void setDataCell(DataCell[] cells){
         this.cells = cells;
   }
-  public String getSymbol(){
+  public int getSymbol(){
         return symbol;
   }
-  public void setSymbol(String symbol){
+  public void setSymbol(int symbol){
       this.symbol = symbol;
   }
 

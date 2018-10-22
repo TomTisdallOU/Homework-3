@@ -1,5 +1,6 @@
 package com.example.tictactoe;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button playerButton = null;
+    int current = 0;
+    Player[] players = new Player[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +37,44 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(v.getContext(), player_form.class );
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intent.putExtra("Title", "Player 1");
-                v.getContext().startActivity(intent);
+                startActivityForResult(intent, 1);
                 //TODO send name and icon back
 
             }
         });
 
 
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+
+      //  String firstName = null;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+
+        if(resultCode== Activity.RESULT_OK){
+            String playerNumber = data.getStringExtra("Title");
+            String playerName = data.getStringExtra("PlayerName");
+            int symbol = data.getIntExtra("SymbolNumber",0);
+            int player= 0;
+            if(playerNumber.equals("Player 1")){
+               player = 0;
+            }else{
+                player = 1;
+            }
+            players[player] = new Player(playerName, symbol);
+           // players[player].setName(playerName);
+          //  players[player].setSymbol(symbol);
+
+            //TODO setup second activity
+
+        }
+        else if (resultCode == Activity.RESULT_CANCELED){
+
+        }
     }
 
 }
