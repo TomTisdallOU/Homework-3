@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intent.putExtra("Title", "Player 1");
                 startActivityForResult(intent, 1);
-                //TODO send name and icon back
+
 
             }
         });
@@ -66,10 +66,15 @@ public class MainActivity extends AppCompatActivity {
                 player = 1;
             }
             players[player] = new Player(playerName, symbol);
-           // players[player].setName(playerName);
-          //  players[player].setSymbol(symbol);
+
 
             //TODO setup second activity
+            if(player == 0){
+                Intent intent = new Intent(this, player_form.class );
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.putExtra("Title", "Player 2");
+                startActivityForResult(intent, 1);
+            }
 
         }
         else if (resultCode == Activity.RESULT_CANCELED){
