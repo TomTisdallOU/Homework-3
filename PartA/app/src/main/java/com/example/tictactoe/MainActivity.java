@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Title", "Player 2");
                 startActivityForResult(intent, 1);
             }
+            else{
+                //Start Game board activity -- pass in player info
+            }
 
         }
         else if (resultCode == Activity.RESULT_CANCELED){
