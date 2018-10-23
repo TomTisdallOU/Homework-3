@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button playerButton = null;
-    int current = 0;
+
     Player[] players = new Player[2];
 
     @Override
@@ -77,6 +77,14 @@ public class MainActivity extends AppCompatActivity {
             }
             else{
                 //Start Game board activity -- pass in player info
+                Intent intent = new Intent(this, game_board.class );
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.putExtra("Player 1 Name", players[0].getName());
+                intent.putExtra("Player 1 Symbol",players[0].getSymbol());
+                intent.putExtra("Player 2 Name", players[1].getName());
+                intent.putExtra("Player 2 Symbol",players[1].getSymbol());
+
+                startActivityForResult(intent, 1);
             }
 
         }
