@@ -25,5 +25,8 @@ public class game_board extends AppCompatActivity {
         //    title = (String) savedInstanceState.getSerializable("Title");
         }
 
+        //TODO Implement game board logic
+        //TODO create custom button to track symbol and location
+        //TODO use GameBoard.java for reference
     }
 }
