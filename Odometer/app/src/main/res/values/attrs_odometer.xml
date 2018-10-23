@@ -1,7 +1,0 @@
-<resources>
-    <declare-styleable name="Odometer">
-        <attr name="odoValue" format="string" />
-        <attr name="odoColor" format="color" />
-        <attr name="odoHeight" format="integer" />
-    </declare-styleable>
-</resources>
