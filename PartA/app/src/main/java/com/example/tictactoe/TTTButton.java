@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.widget.Button;
 
 public class TTTButton extends ConstraintLayout {
@@ -23,8 +24,14 @@ Button tttButton = null;
     public TTTButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs,0);
-     //   this.buttonImage = buttonImage;
-      //  this.buttonPosition = buttonPosition;
+
+        //inflate the view
+        LayoutInflater inflater = LayoutInflater.from(context);
+        ConstraintLayout container = (ConstraintLayout) inflater.inflate(R.layout.ttt_button, this);
+        tttButton = container.findViewById(R.id.button);
+       
+
+        //TODO Add on click event -- calling the player.
     }
 
     public TTTButton(Context context, AttributeSet attrs, int defStyleAttr) {
