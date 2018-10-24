@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.tictactoe.TTTButton
-        android:id="@+id/TTTButton2"
+        android:id="@+id/TTTButton1"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
-        android:id="@+id/TTTButton7"
+        android:id="@+id/TTTButton6"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -41,11 +41,11 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.377"
-        app:layout_constraintStart_toEndOf="@+id/TTTButton"
+        app:layout_constraintStart_toEndOf="@+id/TTTButton5"
         app:layout_constraintTop_toBottomOf="@+id/TTTButton3"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
-        android:id="@+id/TTTButton"
+        android:id="@+id/TTTButton5"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTTButton8"></com.example.tictactoe.TTTButton>
+        app:layout_constraintTop_toBottomOf="@+id/TTTButton2"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
         android:id="@+id/TTTButton4"
@@ -63,13 +63,13 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/TTTButton"
+        app:layout_constraintEnd_toStartOf="@+id/TTTButton5"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTTButton2"></com.example.tictactoe.TTTButton>
+        app:layout_constraintTop_toBottomOf="@+id/TTTButton1"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
-        android:id="@+id/TTTButton8"
+        android:id="@+id/TTTButton2"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -77,7 +77,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/TTTButton3"
         app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toEndOf="@+id/TTTButton2"
+        app:layout_constraintStart_toEndOf="@+id/TTTButton1"
         app:layout_constraintTop_toBottomOf="@+id/textView"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
@@ -93,18 +93,19 @@
         app:layout_constraintTop_toTopOf="parent"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
+        android:id="@+id/TTTButton7"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/TTTButton5"
+        app:layout_constraintEnd_toStartOf="@+id/TTTButton8"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TTTButton4"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
-        android:id="@+id/TTTButton5"
+        android:id="@+id/TTTButton8"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
@@ -113,16 +114,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTTButton"></com.example.tictactoe.TTTButton>
+        app:layout_constraintTop_toBottomOf="@+id/TTTButton5"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
+        android:id="@+id/TTTButton9"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toEndOf="@+id/TTTButton5"
-        app:layout_constraintTop_toBottomOf="@+id/TTTButton7"></com.example.tictactoe.TTTButton>
+        app:layout_constraintStart_toEndOf="@+id/TTTButton8"
+        app:layout_constraintTop_toBottomOf="@+id/TTTButton6"></com.example.tictactoe.TTTButton>
 
 </android.support.constraint.ConstraintLayout>

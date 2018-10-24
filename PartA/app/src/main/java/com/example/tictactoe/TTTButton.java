@@ -29,7 +29,7 @@ Button tttButton = null;
         LayoutInflater inflater = LayoutInflater.from(context);
         ConstraintLayout container = (ConstraintLayout) inflater.inflate(R.layout.ttt_button, this);
         tttButton = container.findViewById(R.id.button);
-       
+
 
         //TODO Add on click event -- calling the player.
     }
