@@ -41,7 +41,7 @@ Button tttButton = null;
         super(context, attrs, defStyleAttr);
         init(attrs, defStyleAttr);
      //   this.buttonImage = buttonImage;
-     //   this.buttonPosition = buttonPosition;
+      //  this.buttonPosition = buttonPosition;
     }
 
     public int getButtonImage() {
