@@ -45,7 +45,6 @@ public class game_board extends AppCompatActivity {
         //    title = (String) savedInstanceState.getSerializable("Title");
         }
 
-        View.OnClickListener myMouse =  new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TTTButton myButton = findViewById(v.getId());
@@ -77,7 +76,6 @@ public class game_board extends AppCompatActivity {
 
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
-            tttButton[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     TTTButton myButton = findViewById(v.getId());

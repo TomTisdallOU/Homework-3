@@ -39,7 +39,11 @@ public class Player {
     }
 
     public void MarkCell( int cellNumber){
+<<<<<<< HEAD
         cells[cellNumber].setSymbol(symbol);
+=======
+        cells[cellNumber].setSymbol("1");
+>>>>>>> 384b9e6e9e0dc424d80b3541ae41ae057d8ec86e
 
 
     }
