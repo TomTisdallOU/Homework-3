@@ -10,18 +10,18 @@ import java.util.Observer;
 
 public class DataCell extends Observable{
 
-    private String symbol = "";
+    private int symbol;
     public boolean indicator;
     private ArrayList<Observer> observers = new ArrayList<>();
 
 
-    public void ObservableValue(String symbol){
+    public void ObservableValue(int symbol){
         this.symbol = symbol;
     }
-    public String getSymbol(){
+    public int getSymbol(){
         return symbol;
     }
-    public void setSymbol(String symbol){
+    public void setSymbol(int symbol){
         this.symbol = symbol;
         this.indicator = true;
         setChanged();

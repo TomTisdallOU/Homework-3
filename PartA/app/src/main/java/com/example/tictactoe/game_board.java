@@ -81,14 +81,39 @@ public class game_board extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     TTTButton myButton = findViewById(v.getId());
-                    myButton.setBackgroundResource(players[0].getSymbol());
+                    if(turnLabel.getText().equals(players[0].getName() + " your turn!"))
+                    {
+                        players[0].register(myButton, myButton.getButtonPosition());
+
+                        players[0].MarkCell(myButton.getButtonPosition());
+
+                        if(players[0].winner())
+                        {
+                            turnLabel.setText(players[0].getName() + " wins!");
+                        }
+                        else
+                        {
+                            turnLabel.setText(players[1].getName() + " your turn!");
+                        }
+
+                    }
+                    else if(turnLabel.getText().equals(players[1].getName() + " your turn!"))
+                    {
+                        players[1].register(myButton, myButton.getButtonPosition());
+
+                        players[1].MarkCell(myButton.getButtonPosition());
+
+                        if(players[1].winner())
+                        {
+                            turnLabel.setText(players[1].getName() + " wins!");
+                        }
+                        else
+                        {
+                            turnLabel.setText(players[0].getName() + " your turn!");
+                        }
+                    }
                 }
             });
-            tttButton[i].setButtonImage(R.drawable.black_dragon);
-
-        //TODO register player with the button
-                players[0].register(tttButton[i],i);
-                players[1].register(tttButton[i],i);
         }
 
     }

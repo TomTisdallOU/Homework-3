@@ -39,7 +39,7 @@ public class Player {
     }
 
     public void MarkCell( int cellNumber){
-       // cells[cellNumber].setSymbol(this.symbol);
+        cells[cellNumber].setSymbol(symbol);
 
 
     }

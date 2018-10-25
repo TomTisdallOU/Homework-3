@@ -79,6 +79,6 @@ Button tttButton = null;
 
     @Override
     public void update(Observable o, Object arg) {
-        this.setButtonImage((int) arg);
+        this.setBackgroundResource((int) arg);
     }
 }
