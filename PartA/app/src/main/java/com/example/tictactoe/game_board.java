@@ -11,6 +11,19 @@ public class game_board extends AppCompatActivity {
     TextView turnLabel = null;
     TTTButton[] tttButton = new TTTButton[9];
 
+    private static final int[] BUTTON_IDS = {
+            R.id.TTTButton1,
+            R.id.TTTButton2,
+            R.id.TTTButton3,
+            R.id.TTTButton4,
+            R.id.TTTButton5,
+            R.id.TTTButton6,
+            R.id.TTTButton7,
+            R.id.TTTButton8,
+            R.id.TTTButton9,
+    };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +69,17 @@ public class game_board extends AppCompatActivity {
         turnLabel = findViewById(R.id.turnLabel);
         turnLabel.setText(players[0].getName() + " your turn!");
 
-        tttButton[0].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        for (int i = 0; i < 9; i++) {
+            tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
+            tttButton[i].setButtonPosition(i);
+            tttButton[i].setOnClickListener(myMouse);
+        //TODO register player with the button
+            //    players[0].register(tttButton[i],i);
+            //    players[1].register(tttButton[i],i);
 
-            }
-        });
+
+
+        }
 
     }
 }
