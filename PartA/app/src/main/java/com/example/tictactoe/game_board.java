@@ -124,7 +124,6 @@ public class game_board extends AppCompatActivity {
         //TODO register player with the button
                 players[0].register(tttButton[i],i);
                 players[1].register(tttButton[i],i);
->>>>>>> 384b9e6e9e0dc424d80b3541ae41ae057d8ec86e
         }
 
     }
