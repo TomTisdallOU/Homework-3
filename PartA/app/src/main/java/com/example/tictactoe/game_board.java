@@ -45,11 +45,13 @@ public class game_board extends AppCompatActivity {
         //    title = (String) savedInstanceState.getSerializable("Title");
         }
 
+    TTTButton.OnClickListener myMouse =  new TTTButton.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TTTButton myButton = findViewById(v.getId());
                 int i = myButton.getButtonPosition();
                 players[currentPlayer].MarkCell(i);
+                tttButton[i].setButtonImage(players[currentPlayer].getSymbol());
                 if (players[currentPlayer].winner()) {
                     turnLabel.setText("Winner Winner Chicken Dinner!!!!!!!");
 
@@ -76,6 +78,8 @@ public class game_board extends AppCompatActivity {
 
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
+            tttButton[i].setOnClickListener(myMouse);
+     /*       tttButton[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     TTTButton myButton = findViewById(v.getId());
@@ -111,7 +115,16 @@ public class game_board extends AppCompatActivity {
                         }
                     }
                 }
+<<<<<<< HEAD
             });
+=======
+            }); */
+
+
+        //TODO register player with the button
+                players[0].register(tttButton[i],i);
+                players[1].register(tttButton[i],i);
+>>>>>>> 384b9e6e9e0dc424d80b3541ae41ae057d8ec86e
         }
 
     }
