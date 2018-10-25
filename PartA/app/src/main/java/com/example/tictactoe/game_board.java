@@ -51,6 +51,7 @@ public class game_board extends AppCompatActivity {
                 TTTButton myButton = findViewById(v.getId());
                 int i = myButton.getButtonPosition();
                 players[currentPlayer].MarkCell(i);
+                tttButton[i].setButtonImage(players[currentPlayer].getSymbol());
                 if (players[currentPlayer].winner()) {
                     turnLabel.setText("Winner Winner Chicken Dinner!!!!!!!");
 
