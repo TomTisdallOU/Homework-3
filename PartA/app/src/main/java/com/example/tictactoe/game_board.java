@@ -3,6 +3,7 @@ package com.example.tictactoe;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class game_board extends AppCompatActivity {
@@ -63,6 +64,8 @@ public class game_board extends AppCompatActivity {
             }
         };
 
+
+
         //TODO Implement game board logic
         //TODO create custom button to track symbol and location
         //TODO use GameBoard.java for reference
@@ -74,11 +77,8 @@ public class game_board extends AppCompatActivity {
             tttButton[i].setButtonPosition(i);
             tttButton[i].setOnClickListener(myMouse);
         //TODO register player with the button
-            //    players[0].register(tttButton[i],i);
-            //    players[1].register(tttButton[i],i);
-
-
-
+                players[0].register(tttButton[i],i);
+                players[1].register(tttButton[i],i);
         }
 
     }

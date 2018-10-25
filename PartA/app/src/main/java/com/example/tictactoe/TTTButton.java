@@ -8,7 +8,10 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.Button;
 
-public class TTTButton extends ConstraintLayout {
+import java.util.Observable;
+import java.util.Observer;
+
+public class TTTButton extends ConstraintLayout implements Observer {
 
 private int buttonImage = 0;
 private int buttonPosition = 0;
@@ -74,4 +77,8 @@ Button tttButton = null;
 
     }
 
+    @Override
+    public void update(Observable o, Object arg) {
+        this.setButtonImage((int) arg);
+    }
 }
