@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/turnLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toStartOf="@+id/TTTButton3"
         app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toEndOf="@+id/TTTButton1"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></com.example.tictactoe.TTTButton>
+        app:layout_constraintTop_toBottomOf="@+id/turnLabel"></com.example.tictactoe.TTTButton>
 
     <com.example.tictactoe.TTTButton
         android:id="@+id/TTTButton3"

@@ -1,4 +1,4 @@
-/*package com.example.tictactoe;
+*package com.example.tictactoe;
 
 import javafx.beans.Observable;
 
@@ -27,7 +27,7 @@ public class GameBoard extends Applet {
     Player[] players = new Player[2];
 
 
-    //
+
     @Override
     public void init() {
 
@@ -146,4 +146,3 @@ public class GameBoard extends Applet {
     }
 }
 
-*/

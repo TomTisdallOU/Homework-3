@@ -2,10 +2,14 @@ package com.example.tictactoe;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class game_board extends AppCompatActivity {
     int currentPlayer = 0;
     Player[] players = new Player[2];
+    TextView turnLabel = null;
+    TTTButton[] tttButton = new TTTButton[9];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +32,8 @@ public class game_board extends AppCompatActivity {
         //TODO Implement game board logic
         //TODO create custom button to track symbol and location
         //TODO use GameBoard.java for reference
+        turnLabel = findViewById(R.id.turnLabel);
+        turnLabel.setText();
+
     }
 }

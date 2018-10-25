@@ -52,16 +52,16 @@ public class Player {
     public void setName(String name) {
         this.name = name;
     }
-  public DataCell[] getCells(){
+    public DataCell[] getCells(){
         return cells;
   }
-  public void setDataCell(DataCell[] cells){
+    public void setDataCell(DataCell[] cells){
         this.cells = cells;
   }
-  public int getSymbol(){
+    public int getSymbol(){
         return symbol;
   }
-  public void setSymbol(int symbol){
+    public void setSymbol(int symbol){
       this.symbol = symbol;
   }
 
