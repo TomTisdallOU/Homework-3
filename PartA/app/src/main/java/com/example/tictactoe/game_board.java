@@ -12,6 +12,7 @@ public class game_board extends AppCompatActivity {
     Player[] players = new Player[2];
     TextView turnLabel = null;
     TTTButton[] tttButton = new TTTButton[9];
+    Button startOver = null;
 
     private static final int[] BUTTON_IDS = {
             R.id.TTTButton1,
@@ -45,6 +46,22 @@ public class game_board extends AppCompatActivity {
         //    title = (String) savedInstanceState.getSerializable("Title");
         }
 
+        startOver = findViewById(R.id.startOver);
+        startOver.setVisibility(View.INVISIBLE);
+        startOver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                players[0].reset();
+                players[1].reset();
+                currentPlayer = 0;
+                for (int i = 0; i < 9; i++) {
+                    tttButton[i].setButtonImage(0);
+                }
+                startOver.setVisibility(View.INVISIBLE);
+                turnLabel.setText(players[currentPlayer].getName() + " your turn!");
+            }
+        });
+
     TTTButton.OnClickListener myMouse =  new TTTButton.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +71,7 @@ public class game_board extends AppCompatActivity {
                 tttButton[i].setButtonImage(players[currentPlayer].getSymbol());
                 if (players[currentPlayer].winner()) {
                     turnLabel.setText(players[currentPlayer].getName() + " Wins!");
+                    startOver.setVisibility(View.VISIBLE);
 
                 }else {
 
@@ -82,46 +100,6 @@ public class game_board extends AppCompatActivity {
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
             tttButton[i].setOnClickListener(myMouse);
-     /*       tttButton[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    TTTButton myButton = findViewById(v.getId());
-                    if(turnLabel.getText().equals(players[0].getName() + " your turn!"))
-                    {
-                        players[0].register(myButton, myButton.getButtonPosition());
-
-                        players[0].MarkCell(myButton.getButtonPosition());
-
-                        if(players[0].winner())
-                        {
-                            turnLabel.setText(players[0].getName() + " wins!");
-                        }
-                        else
-                        {
-                            turnLabel.setText(players[1].getName() + " your turn!");
-                        }
-
-                    }
-                    else if(turnLabel.getText().equals(players[1].getName() + " your turn!"))
-                    {
-                        players[1].register(myButton, myButton.getButtonPosition());
-
-                        players[1].MarkCell(myButton.getButtonPosition());
-
-                        if(players[1].winner())
-                        {
-                            turnLabel.setText(players[1].getName() + " wins!");
-                        }
-                        else
-                        {
-                            turnLabel.setText(players[0].getName() + " your turn!");
-                        }
-                    }
-                }
-<<<<<<< HEAD
-            });
-=======
-            }); */
 
 
         //TODO register player with the button

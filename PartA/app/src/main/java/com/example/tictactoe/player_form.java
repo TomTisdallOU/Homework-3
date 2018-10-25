@@ -50,7 +50,9 @@ public class player_form extends AppCompatActivity {
         spinnerImages = new int[] {R.drawable.red_dragon, R.drawable.black_dragon, R.drawable.blue_dragon,
                 R.drawable.green_dragon, R.drawable.purple_dragon};
         SpinnerAdapter spinnerAdapter = new SpinnerAdapter(this, spinnerSymbolNames, spinnerImages);
+
         spinner.setAdapter(spinnerAdapter);
+        
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {

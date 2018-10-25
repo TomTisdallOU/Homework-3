@@ -38,6 +38,12 @@ public class Player {
         }
     }
 
+    public void reset(){
+        for (int i = 0; i < 9; i++) {
+            cells[i] = new DataCell();
+        }
+    }
+
     public void MarkCell( int cellNumber){
         cells[cellNumber].setSymbol(symbol);
 

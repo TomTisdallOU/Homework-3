@@ -53,7 +53,8 @@ Button tttButton = null;
     }
 
     public void setButtonImage(int buttonImage) {
-        this.buttonImage = buttonImage;
+       // this.buttonImage = buttonImage;
+        this.setBackgroundResource(buttonImage);
     }
 
     public void setButtonPosition(int buttonPosition) {
