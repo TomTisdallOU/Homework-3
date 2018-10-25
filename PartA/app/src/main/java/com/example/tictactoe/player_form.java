@@ -52,7 +52,7 @@ public class player_form extends AppCompatActivity {
         SpinnerAdapter spinnerAdapter = new SpinnerAdapter(this, spinnerSymbolNames, spinnerImages);
 
         spinner.setAdapter(spinnerAdapter);
-        
+
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {

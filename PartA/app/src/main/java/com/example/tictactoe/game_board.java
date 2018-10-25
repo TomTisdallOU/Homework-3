@@ -13,6 +13,8 @@ public class game_board extends AppCompatActivity {
     TextView turnLabel = null;
     TTTButton[] tttButton = new TTTButton[9];
     Button startOver = null;
+    Button cancel = null;
+    Button start = null;
 
     private static final int[] BUTTON_IDS = {
             R.id.TTTButton1,
@@ -46,7 +48,25 @@ public class game_board extends AppCompatActivity {
         //    title = (String) savedInstanceState.getSerializable("Title");
         }
 
-        startOver = findViewById(R.id.startOver);
+        start = findViewById(R.id.start);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i = 0; i < 9; i++) {
+                    tttButton[i].setEnabled(true);
+                }
+            }
+        });
+
+        cancel = findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        startOver = findViewById(R.id.restart);
         startOver.setVisibility(View.INVISIBLE);
         startOver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +120,7 @@ public class game_board extends AppCompatActivity {
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
             tttButton[i].setOnClickListener(myMouse);
+            tttButton[i].setEnabled(false);
 
 
         //TODO register player with the button
