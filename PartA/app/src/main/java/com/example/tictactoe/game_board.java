@@ -53,15 +53,18 @@ public class game_board extends AppCompatActivity {
                 players[currentPlayer].MarkCell(i);
                 tttButton[i].setButtonImage(players[currentPlayer].getSymbol());
                 if (players[currentPlayer].winner()) {
-                    turnLabel.setText("Winner Winner Chicken Dinner!!!!!!!");
+                    turnLabel.setText(players[currentPlayer].getName() + " Wins!");
 
-                }
+                }else {
 
-                //TODO if current = 0 set to 1 else 0  -- try figuring out the remainder to track  # moves
-                if (currentPlayer == 1) {
-                    currentPlayer = 0;
-                } else {
-                    currentPlayer = 1;
+                    //TODO if current = 0 set to 1 else 0  -- try figuring out the remainder to track  # moves
+                    if (currentPlayer == 1) {
+                        currentPlayer = 0;
+                    } else {
+                        currentPlayer = 1;
+                    }
+
+                    turnLabel.setText(players[currentPlayer].getName() + " your turn!");
                 }
             }
         };
