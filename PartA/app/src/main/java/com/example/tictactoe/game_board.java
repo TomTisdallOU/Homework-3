@@ -76,6 +76,7 @@ public class game_board extends AppCompatActivity {
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
             tttButton[i].setOnClickListener(myMouse);
+            tttButton[i].setButtonImage(R.drawable.black_dragon);
         //TODO register player with the button
                 players[0].register(tttButton[i],i);
                 players[1].register(tttButton[i],i);

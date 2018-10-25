@@ -9,7 +9,7 @@
         android:id="@+id/button"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:text="Button"
+        android:text=""
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="242dp" />
 </android.support.constraint.ConstraintLayout>
