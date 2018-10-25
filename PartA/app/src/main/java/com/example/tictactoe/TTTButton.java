@@ -3,15 +3,16 @@ package com.example.tictactoe;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.constraint.ConstraintLayout;
+
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
+
 import android.widget.Button;
 
 import java.util.Observable;
 import java.util.Observer;
 
-public class TTTButton extends ConstraintLayout implements Observer {
+public class TTTButton extends AppCompatButton implements Observer {
 
 private int buttonImage = 0;
 private int buttonPosition = 0;
@@ -29,12 +30,11 @@ Button tttButton = null;
         init(attrs,0);
 
         //inflate the view
-        LayoutInflater inflater = LayoutInflater.from(context);
-        ConstraintLayout container = (ConstraintLayout) inflater.inflate(R.layout.ttt_button, this);
-        tttButton = container.findViewById(R.id.button);
+     //   LayoutInflater inflater = LayoutInflater.from(context);
+     //   ConstraintLayout container = (ConstraintLayout) inflater.inflate(R.layout.ttt_button, this);
+      //  tttButton = container.findViewById(R.id.button);
 
 
-        //TODO Add on click event -- calling the player.
     }
 
     public TTTButton(Context context, AttributeSet attrs, int defStyleAttr) {

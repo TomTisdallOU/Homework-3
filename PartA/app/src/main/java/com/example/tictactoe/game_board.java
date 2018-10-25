@@ -1,5 +1,6 @@
 package com.example.tictactoe;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -73,10 +74,12 @@ public class game_board extends AppCompatActivity {
         turnLabel.setText(players[0].getName() + " your turn!");
 
         for (int i = 0; i < 9; i++) {
+
             tttButton[i] = (TTTButton) findViewById(BUTTON_IDS[i]);
             tttButton[i].setButtonPosition(i);
             tttButton[i].setOnClickListener(myMouse);
             tttButton[i].setButtonImage(R.drawable.black_dragon);
+
         //TODO register player with the button
                 players[0].register(tttButton[i],i);
                 players[1].register(tttButton[i],i);
